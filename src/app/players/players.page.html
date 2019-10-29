@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>players List</ion-title>
+    <ion-buttons slot="start"></ion-buttons>
+    <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let item of players">
+    <ion-item (click)="changeUrl(item)">
+      <ion-card-content>
+        <ion-label>{{ item?.name }} | {{ item?.id.substring(0,4) }}
+        </ion-label>
+      </ion-card-content>
+    </ion-item>
+  </ion-card>
+</ion-content>
